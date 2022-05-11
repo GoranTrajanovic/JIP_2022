@@ -1,0 +1,33 @@
+error in line# 1
+     lexed as: 
+    should be:  NOT
+error in line# 2
+     lexed as: 
+    should be:  IN
+error in line# 3
+     lexed as:  in a comment
+    should be:  OBJECTID a
+error in line# 4
+     lexed as: 
+    should be:  OBJECTID comment
+error in line# 5
+     lexed as: 
+    should be:  '('
+error in line# 6
+     lexed as: 
+    should be:  '*'
+error in line# 7
+     lexed as: 
+    should be:  NOT
+error in line# 8
+     lexed as: 
+    should be:  OBJECTID a
+error in line# 9
+     lexed as: 
+    should be:  OBJECTID comment
+error in line# 10
+     lexed as:  * not a comment * )
+    should be:  '*'
+error in line# 11
+     lexed as: 
+    should be:  ')'

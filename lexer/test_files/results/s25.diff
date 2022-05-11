@@ -1,0 +1,33 @@
+error in line# 1
+     lexed as: 
+    should be:  OBJECTID objid
+error in line# 2
+     lexed as: objid
+    should be:  OBJECTID obj_id
+error in line# 3
+     lexed as: obj_id
+    should be:  OBJECTID oBJ_ID
+error in line# 4
+     lexed as: oBJ_ID
+    should be:  OBJECTID this1321321isth382t843____daLong_IDIDd
+error in line# 5
+     lexed as: this1321321isth382t843____daLong_IDIDd
+    should be:  TYPEID Mytype
+error in line# 6
+     lexed as: 
+    should be:  TYPEID MYTYPE
+error in line# 7
+     lexed as: 
+    should be:  TYPEID Type_4
+error in line# 8
+     lexed as: Mytype
+    should be:  TYPEID T3432_adwqfewf234g4ffew__sdfdwwSDQWE342
+error in line# 9
+     lexed as: MYTYPE
+    should be: 
+error in line# 10
+     lexed as: Type_4
+    should be: 
+error in line# 11
+     lexed as: T3432_adwqfewf234g4ffew__sdfdwwSDQWE342
+    should be: 

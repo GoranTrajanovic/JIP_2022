@@ -1,0 +1,9 @@
+error in line# 1
+     lexed as: 
+    should be:  ERROR "Unterminated string constant"
+error in line# 2
+     lexed as: "c
+    should be:  OBJECTID d
+error in line# 3
+     lexed as: d"
+    should be:  ERROR "Unterminated string constant"

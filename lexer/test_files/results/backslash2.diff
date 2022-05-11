@@ -1,0 +1,30 @@
+error in line# 1
+     lexed as:  not going to escape this newline
+    should be:  ERROR "Unterminated string constant"
+error in line# 2
+     lexed as: "
+    should be:  ERROR "Unterminated string constant"
+error in line# 3
+     lexed as: 
+    should be:  ERROR "Unterminated string constant"
+error in line# 4
+     lexed as:  is also not escaped \\
+    should be:  ERROR "Unterminated string constant"
+error in line# 5
+     lexed as: "
+    should be:  STR_CONST "This is, though \\\n"
+error in line# 6
+     lexed as: 
+    should be:  STR_CONST "\\"
+error in line# 7
+     lexed as:  is, though \\\
+    should be:  STR_CONST "It's fine to have this: \n in a string"
+error in line# 8
+     lexed as: "
+    should be: 
+error in line# 10
+     lexed as: "\\"
+    should be: 
+error in line# 12
+     lexed as:  fine to have this: \n in a string"
+    should be: 

@@ -1,0 +1,9 @@
+error in line# 1
+     lexed as: 
+    should be:  OBJECTID before_the_comment
+error in line# 2
+     lexed as: 
+    should be:  ERROR "EOF in comment"
+error in line# 3
+     lexed as: before_the_comment
+    should be: 

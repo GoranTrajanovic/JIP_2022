@@ -1,0 +1,6 @@
+error in line# 1
+     lexed as: 
+    should be:  OBJECTID test
+error in line# 3
+     lexed as: test
+    should be: 

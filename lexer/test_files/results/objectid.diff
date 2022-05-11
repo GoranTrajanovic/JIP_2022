@@ -1,0 +1,54 @@
+error in line# 1
+     lexed as: quasar
+    should be:  OBJECTID quasar
+error in line# 2
+     lexed as: Quasar
+    should be:  TYPEID Quasar
+error in line# 3
+     lexed as: q__uasar
+    should be:  OBJECTID q__uasar
+error in line# 4
+     lexed as: q__uasar__
+    should be:  OBJECTID q__uasar__
+error in line# 5
+     lexed as: Q__uasar
+    should be:  TYPEID Q__uasar
+error in line# 6
+     lexed as: Q_uasar___
+    should be:  TYPEID Q_uasar___
+error in line# 7
+     lexed as: q_23_ads
+    should be:  OBJECTID q_23_ads
+error in line# 8
+     lexed as: q__23__ads
+    should be:  OBJECTID q__23__ads
+error in line# 9
+     lexed as: Q_23_ads
+    should be:  TYPEID Q_23_ads
+error in line# 10
+     lexed as: Q_23ADS
+    should be:  TYPEID Q_23ADS
+error in line# 11
+     lexed as: 33fjsjs
+    should be:  INT_CONST 33
+error in line# 12
+     lexed as: 34jjkljkl
+    should be:  OBJECTID fjsjs
+error in line# 13
+     lexed as: f3243f
+    should be:  INT_CONST 34
+error in line# 14
+     lexed as: ___23432
+    should be:  OBJECTID jjkljkl
+error in line# 15
+     lexed as: __fedfj
+    should be:  OBJECTID f3243f
+error in line# 16
+     lexed as: _____3232FFFFF____
+    should be:  ERROR "_"
+error in line# 17
+     lexed as: 
+    should be:  ERROR "_"
+error in line# 18
+     lexed as:  Quasar q__uasar q__uasar__ Q__uasar Q_uasar___ q_23_ads q__23__ads Q_23_ads Q_23ADS 33fjsjs 34jjkljkl f3243f ___23432 __fedfj _____3232FFFFF____  
+    should be:  ERROR "_"

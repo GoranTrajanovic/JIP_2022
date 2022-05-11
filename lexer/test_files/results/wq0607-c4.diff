@@ -1,0 +1,21 @@
+error in line# 1
+     lexed as: 
+    should be:  STR_CONST "\\-"
+error in line# 2
+     lexed as: 
+    should be:  '-'
+error in line# 3
+     lexed as: "\\-"-"-\-"--\""\\"-"\"\\"-\-"\\"""\--"\""\"
+    should be:  STR_CONST "--"
+error in line# 4
+     lexed as: "\\""\"--\""\-\""\"--\\"\"\\"--""\"\--""\"
+    should be:  STR_CONST "\\"
+error in line# 5
+     lexed as: "\\""\"--\""\\""\"--\\"\"\\""--"\"\""\"
+    should be:  STR_CONST "\"--\""
+error in line# 6
+     lexed as: "\-\""\--"\""\--\""\"\\"\--"\\"""\--"\""\"
+    should be:  ERROR "\\"
+error in line# 7
+     lexed as: 
+    should be:  '-'

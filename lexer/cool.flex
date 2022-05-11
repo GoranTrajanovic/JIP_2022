@@ -51,18 +51,32 @@ extern YYSTYPE cool_yylval;
  */
 
 DARROW          =>
+%x COMMENT
 
 %%
 
  /*
   *  Nested comments
   */
-
+<COMMENT>{
+  "*)" { BEGIN INITIAL; }
+  \n { curr_lineno++; ECHO;}
+  .    {}
+}
 
  /*
   *  The multiple-character operators.
   */
-{DARROW}		{ return (DARROW); }
+<INITIAL>{
+  "(*"  { BEGIN COMMENT; }
+  {DARROW}		{ return (DARROW); }
+  ("class")[ |\n|EOF] {return (CLASS); }
+  \n { curr_lineno++; ECHO;}
+  "else" { return (ELSE); }
+  "eLse" { return (ELSE); }
+}
+
+
 
  /*
   * Keywords are case-insensitive except for the values true and false,

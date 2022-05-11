@@ -1,0 +1,327 @@
+error in line# 1
+     lexed as: 
+    should be:  CLASS
+error in line# 2
+     lexed as: 
+    should be:  TYPEID A
+error in line# 3
+     lexed as: 
+    should be:  '{'
+error in line# 4
+     lexed as: 
+    should be:  OBJECTID io
+error in line# 5
+     lexed as: 
+    should be:  ':'
+error in line# 6
+     lexed as: 
+    should be:  TYPEID IO
+error in line# 7
+     lexed as: 
+    should be:  ASSIGN
+error in line# 8
+     lexed as: 
+    should be:  NEW
+error in line# 9
+     lexed as: 
+    should be:  TYPEID IO
+error in line# 10
+     lexed as: 
+    should be:  ';'
+error in line# 11
+     lexed as: 
+    should be:  OBJECTID out_a
+error in line# 12
+     lexed as: 
+    should be:  '('
+error in line# 13
+     lexed as: 
+    should be:  ')'
+error in line# 14
+     lexed as: 
+    should be:  ':'
+error in line# 15
+     lexed as: 
+    should be:  TYPEID Object
+error in line# 16
+     lexed as: 
+    should be:  '{'
+error in line# 17
+     lexed as: 
+    should be:  OBJECTID io
+error in line# 18
+     lexed as: 
+    should be:  '.'
+error in line# 19
+     lexed as: 
+    should be:  OBJECTID out_string
+error in line# 20
+     lexed as: 
+    should be:  '('
+error in line# 21
+     lexed as: 
+    should be:  STR_CONST "A: Hello world\n"
+error in line# 22
+     lexed as: 
+    should be:  ')'
+error in line# 23
+     lexed as: 
+    should be:  '}'
+error in line# 24
+     lexed as: 
+    should be:  ';'
+error in line# 25
+     lexed as: 
+    should be:  '}'
+error in line# 26
+     lexed as: 
+    should be:  ';'
+error in line# 27
+     lexed as: 
+    should be:  CLASS
+error in line# 28
+     lexed as: 
+    should be:  TYPEID B
+error in line# 29
+     lexed as: 
+    should be:  INHERITS
+error in line# 30
+     lexed as: 
+    should be:  TYPEID A
+error in line# 31
+     lexed as: 
+    should be:  '{'
+error in line# 32
+     lexed as: 
+    should be:  OBJECTID out_b
+error in line# 33
+     lexed as: 
+    should be:  '('
+error in line# 34
+     lexed as: 
+    should be:  ')'
+error in line# 35
+     lexed as: 
+    should be:  ':'
+error in line# 36
+     lexed as: 
+    should be:  TYPEID Object
+error in line# 37
+     lexed as: 
+    should be:  '{'
+error in line# 38
+     lexed as: 
+    should be:  OBJECTID io
+error in line# 39
+     lexed as: 
+    should be:  '.'
+error in line# 40
+     lexed as: 
+    should be:  OBJECTID out_string
+error in line# 41
+     lexed as: 
+    should be:  '('
+error in line# 42
+     lexed as: 
+    should be:  STR_CONST "B: Hello world\n"
+error in line# 43
+     lexed as: 
+    should be:  ')'
+error in line# 44
+     lexed as: 
+    should be:  '}'
+error in line# 45
+     lexed as: 
+    should be:  ';'
+error in line# 46
+     lexed as: 
+    should be:  '}'
+error in line# 47
+     lexed as: 
+    should be:  ';'
+error in line# 48
+     lexed as: 
+    should be:  CLASS
+error in line# 49
+     lexed as:  CLASS
+    should be:  TYPEID C
+error in line# 50
+     lexed as:  {
+    should be:  INHERITS
+error in line# 51
+     lexed as: 
+    should be:  TYPEID IO
+error in line# 52
+     lexed as:    -- Let's assume that we don't want A to not inherit from IO.
+    should be:  '{'
+error in line# 53
+     lexed as: 
+    should be:  OBJECTID out_c
+error in line# 54
+     lexed as:    io : IO <- new IO;
+    should be:  '('
+error in line# 55
+     lexed as: 
+    should be:  ')'
+error in line# 56
+     lexed as:    out_a() : Object { io.out_string("A: Hello world\n") };
+    should be:  ':'
+error in line# 57
+     lexed as: 
+    should be:  TYPEID Object
+error in line# 58
+     lexed as: };
+    should be:  '{'
+error in line# 59
+     lexed as: 
+    should be:  OBJECTID out_string
+error in line# 60
+     lexed as: 
+    should be:  '('
+error in line# 61
+     lexed as:  CLASS
+    should be:  STR_CONST "C: Hello world\n"
+error in line# 62
+     lexed as:  inherits A {
+    should be:  ')'
+error in line# 63
+     lexed as: 
+    should be:  '}'
+error in line# 64
+     lexed as:    -- B does not have to an extra attribute, since it inherits io from A.
+    should be:  ';'
+error in line# 65
+     lexed as: 
+    should be:  '}'
+error in line# 66
+     lexed as:    out_b() : Object { io.out_string("B: Hello world\n") };
+    should be:  ';'
+error in line# 67
+     lexed as: 
+    should be:  CLASS
+error in line# 68
+     lexed as: };
+    should be:  TYPEID D
+error in line# 69
+     lexed as: 
+    should be:  INHERITS
+error in line# 70
+     lexed as: 
+    should be:  TYPEID C
+error in line# 71
+     lexed as:  CLASS
+    should be:  '{'
+error in line# 72
+     lexed as:  inherits IO {
+    should be:  OBJECTID out_d
+error in line# 73
+     lexed as: 
+    should be:  '('
+error in line# 74
+     lexed as:    -- Now the IO methods are part of C.
+    should be:  ')'
+error in line# 75
+     lexed as: 
+    should be:  ':'
+error in line# 76
+     lexed as:    out_c() : Object { out_string("C: Hello world\n") };
+    should be:  TYPEID Object
+error in line# 77
+     lexed as: 
+    should be:  '{'
+error in line# 78
+     lexed as:    -- Note that out_string(...) is just a shorthand for self.out_string(...)
+    should be:  OBJECTID out_string
+error in line# 79
+     lexed as: 
+    should be:  '('
+error in line# 80
+     lexed as: };
+    should be:  STR_CONST "D: Hello world\n"
+error in line# 81
+     lexed as: 
+    should be:  ')'
+error in line# 82
+     lexed as: 
+    should be:  '}'
+error in line# 83
+     lexed as:  CLASS
+    should be:  ';'
+error in line# 84
+     lexed as:  inherits C {
+    should be:  '}'
+error in line# 85
+     lexed as: 
+    should be:  ';'
+error in line# 86
+     lexed as:    -- Inherits IO methods from C.
+    should be:  CLASS
+error in line# 87
+     lexed as: 
+    should be:  TYPEID Main
+error in line# 88
+     lexed as:    out_d() : Object { out_string("D: Hello world\n") };
+    should be:  INHERITS
+error in line# 89
+     lexed as: 
+    should be:  TYPEID IO
+error in line# 90
+     lexed as: };
+    should be:  '{'
+error in line# 91
+     lexed as: 
+    should be:  OBJECTID main
+error in line# 92
+     lexed as: 
+    should be:  '('
+error in line# 93
+     lexed as:  CLASS
+    should be:  ')'
+error in line# 94
+     lexed as:  inherits IO {
+    should be:  ':'
+error in line# 95
+     lexed as: 
+    should be:  TYPEID Object
+error in line# 96
+     lexed as:    -- Same case as #91 CLASS
+    should be:  '{'
+error in line# 97
+     lexed as: C.
+    should be:  '{'
+error in line# 98
+     lexed as: 
+    should be:  '('
+error in line# 99
+     lexed as:    main() : Object {
+    should be:  NEW
+error in line# 100
+     lexed as:       {
+    should be:  TYPEID A
+error in line# 101
+     lexed as:  (new A).out_a();
+    should be:  ')'
+error in line# 102
+     lexed as:  (new B).out_b();
+    should be:  '.'
+error in line# 103
+     lexed as:  (new C).out_c();
+    should be:  OBJECTID out_a
+error in line# 104
+     lexed as:  (new D).out_d();
+    should be:  '('
+error in line# 105
+     lexed as:  out_string("Done.\n");
+    should be:  ')'
+error in line# 106
+     lexed as:       }
+    should be:  ';'
+error in line# 107
+     lexed as:    };
+    should be:  '('
+error in line# 108
+     lexed as: 
+    should be:  NEW
+error in line# 109
+     lexed as: };
+    should be:  TYPEID B

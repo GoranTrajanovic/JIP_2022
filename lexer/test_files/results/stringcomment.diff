@@ -1,0 +1,9 @@
+error in line# 1
+     lexed as:  is a string--and it's still a string"
+    should be:  STR_CONST "This is a string--and it's still a string"
+error in line# 2
+     lexed as:  is a comment, "not a string"
+    should be:  STR_CONST "(* not a comment *)"
+error in line# 4
+     lexed as: ""
+    should be: 

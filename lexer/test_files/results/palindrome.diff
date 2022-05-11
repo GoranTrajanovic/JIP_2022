@@ -1,0 +1,87 @@
+error in line# 2
+     lexed as:  inherits IO {
+    should be:  TYPEID Main
+error in line# 3
+     lexed as:     pal(s : String) : Bool {
+    should be:  INHERITS
+error in line# 4
+     lexed as:  s.length() = 0
+    should be:  TYPEID IO
+error in line# 5
+     lexed as:  true
+    should be:  '{'
+error in line# 6
+     lexed as:  ELSE
+    should be:  OBJECTID pal
+error in line# 7
+     lexed as:  if s.length() = 1
+    should be:  '('
+error in line# 8
+     lexed as:  true
+    should be:  OBJECTID s
+error in line# 9
+     lexed as:  ELSE
+    should be:  ':'
+error in line# 10
+     lexed as:  if s.substr(0, 1) = s.substr(s.length() - 1, 1)
+    should be:  TYPEID String
+error in line# 11
+     lexed as:  pal(s.substr(1, s.length() -2))
+    should be:  ')'
+error in line# 12
+     lexed as:  ELSE
+    should be:  ':'
+error in line# 13
+     lexed as:  false
+    should be:  TYPEID Bool
+error in line# 14
+     lexed as:  fi fi
+    should be:  '{'
+error in line# 15
+     lexed as:     };
+    should be:  IF
+error in line# 16
+     lexed as: 
+    should be:  OBJECTID s
+error in line# 17
+     lexed as:     i : Int;
+    should be:  '.'
+error in line# 18
+     lexed as: 
+    should be:  OBJECTID length
+error in line# 19
+     lexed as:     main() : SELF_TYPE {
+    should be:  '('
+error in line# 20
+     lexed as: 	{
+    should be:  ')'
+error in line# 21
+     lexed as:             i <- ~1;
+    should be:  '='
+error in line# 22
+     lexed as:     out_string("enter a string\n");
+    should be:  INT_CONST 0
+error in line# 23
+     lexed as:     if pal(in_string())
+    should be:  THEN
+error in line# 24
+     lexed as:     then out_string("that was a palindrome\n")
+    should be:  BOOL_CONST true
+error in line# 25
+     lexed as:     #21 ELSE
+    should be:  ELSE
+error in line# 26
+     lexed as:  out_string("that was not a palindrome\n")
+    should be:  IF
+error in line# 27
+     lexed as:     fi;
+    should be:  OBJECTID s
+error in line# 28
+     lexed as: 	}
+    should be:  '.'
+error in line# 29
+     lexed as:     };
+    should be:  OBJECTID length
+error in line# 30
+     lexed as: };
+    should be:  '('

@@ -1,0 +1,402 @@
+error in line# 1
+     lexed as:  example of static and dynamic type differing for a dispatch
+    should be:  CLASS
+error in line# 2
+     lexed as: 
+    should be:  TYPEID Book
+error in line# 3
+     lexed as:  Book inherits IO {
+    should be:  INHERITS
+error in line# 4
+     lexed as:     title : String;
+    should be:  TYPEID IO
+error in line# 5
+     lexed as:     author : String;
+    should be:  '{'
+error in line# 6
+     lexed as: 
+    should be:  OBJECTID title
+error in line# 7
+     lexed as:     initBook(title_p : String, author_p : String) : Book {
+    should be:  ':'
+error in line# 8
+     lexed as:         {
+    should be:  TYPEID String
+error in line# 9
+     lexed as:             title <- title_p;
+    should be:  ';'
+error in line# 10
+     lexed as:             author <- author_p;
+    should be:  OBJECTID author
+error in line# 11
+     lexed as:             self;
+    should be:  ':'
+error in line# 12
+     lexed as:         }
+    should be:  TYPEID String
+error in line# 13
+     lexed as:     };
+    should be:  ';'
+error in line# 14
+     lexed as: 
+    should be:  OBJECTID initBook
+error in line# 15
+     lexed as:     print() : Book {
+    should be:  '('
+error in line# 16
+     lexed as:         {
+    should be:  OBJECTID title_p
+error in line# 17
+     lexed as:             out_string("title:      ").out_string(title).out_string("\n");
+    should be:  ':'
+error in line# 18
+     lexed as:             out_string("author:     ").out_string(author).out_string("\n");
+    should be:  TYPEID String
+error in line# 19
+     lexed as:             self;
+    should be:  ','
+error in line# 20
+     lexed as:         }
+    should be:  OBJECTID author_p
+error in line# 21
+     lexed as:     };
+    should be:  ':'
+error in line# 22
+     lexed as: };
+    should be:  TYPEID String
+error in line# 23
+     lexed as: 
+    should be:  ')'
+error in line# 24
+     lexed as:  Article inherits Book {
+    should be:  ':'
+error in line# 25
+     lexed as:     per_title : String;
+    should be:  TYPEID Book
+error in line# 26
+     lexed as: 
+    should be:  '{'
+error in line# 27
+     lexed as:     initArticle(title_p : String, author_p : String,
+    should be:  '{'
+error in line# 28
+     lexed as:  : String) : Article {
+    should be:  OBJECTID title
+error in line# 29
+     lexed as:         {
+    should be:  ASSIGN
+error in line# 30
+     lexed as:             initBook(title_p, author_p);
+    should be:  OBJECTID title_p
+error in line# 31
+     lexed as:             per_title <- per_title_p;
+    should be:  ';'
+error in line# 32
+     lexed as:             self;
+    should be:  OBJECTID author
+error in line# 33
+     lexed as:         }
+    should be:  ASSIGN
+error in line# 34
+     lexed as:     };
+    should be:  OBJECTID author_p
+error in line# 35
+     lexed as: 
+    should be:  ';'
+error in line# 36
+     lexed as:     print() : Book {
+    should be:  OBJECTID self
+error in line# 37
+     lexed as:         {
+    should be:  ';'
+error in line# 38
+     lexed as:     self@Book.print();
+    should be:  '}'
+error in line# 39
+     lexed as:             out_string("periodical:  ").out_string(per_title).out_string("\n");
+    should be:  '}'
+error in line# 40
+     lexed as:             self;
+    should be:  ';'
+error in line# 41
+     lexed as:         }
+    should be:  OBJECTID print
+error in line# 42
+     lexed as:     };
+    should be:  '('
+error in line# 43
+     lexed as: };
+    should be:  ')'
+error in line# 44
+     lexed as: 
+    should be:  ':'
+error in line# 45
+     lexed as:  BookList inherits IO { 
+    should be:  TYPEID Book
+error in line# 46
+     lexed as:     
+    should be:  '{'
+error in line# 47
+     lexed as: 
+    should be:  '{'
+error in line# 48
+     lexed as: 
+    should be:  OBJECTID out_string
+error in line# 49
+     lexed as: 
+    should be:  '('
+error in line# 50
+     lexed as:     isNil() : Bool { { abort(); true; } };
+    should be:  STR_CONST "title:      "
+error in line# 51
+     lexed as:     
+    should be:  ')'
+error in line# 52
+     lexed as:     cons(hd : Book) : Cons {
+    should be:  '.'
+error in line# 53
+     lexed as:         (let new_cell : Cons <- new Cons in
+    should be:  OBJECTID out_string
+error in line# 54
+     lexed as:             new_cell.init(hd,self)
+    should be:  '('
+error in line# 55
+     lexed as:         )
+    should be:  OBJECTID title
+error in line# 56
+     lexed as:     };
+    should be:  ')'
+error in line# 57
+     lexed as: 
+    should be:  '.'
+error in line# 58
+     lexed as:     
+    should be:  OBJECTID out_string
+error in line# 59
+     lexed as: 
+    should be:  '('
+error in line# 60
+     lexed as: 
+    should be:  STR_CONST "\n"
+error in line# 61
+     lexed as: 
+    should be:  ')'
+error in line# 62
+     lexed as:     car() : Book { { abort(); new Book; } };
+    should be:  ';'
+error in line# 63
+     lexed as:     
+    should be:  OBJECTID out_string
+error in line# 64
+     lexed as:     
+    should be:  '('
+error in line# 65
+     lexed as: 
+    should be:  STR_CONST "author:     "
+error in line# 66
+     lexed as: 
+    should be:  ')'
+error in line# 67
+     lexed as: 
+    should be:  '.'
+error in line# 68
+     lexed as:     cdr() : BookList { { abort(); new BookList; } };
+    should be:  OBJECTID out_string
+error in line# 69
+     lexed as:     
+    should be:  '('
+error in line# 70
+     lexed as:     print_list() : Object { abort() };
+    should be:  OBJECTID author
+error in line# 71
+     lexed as: };
+    should be:  ')'
+error in line# 72
+     lexed as: 
+    should be:  '.'
+error in line# 73
+     lexed as:  Cons inherits BookList {
+    should be:  OBJECTID out_string
+error in line# 74
+     lexed as:     xcar : Book;  -- We keep the car and cdr in attributes.
+    should be:  '('
+error in line# 75
+     lexed as:     xcdr : BookList; -- Because methods and features must have different names,
+    should be:  STR_CONST "\n"
+error in line# 76
+     lexed as:     -- we use xcar and xcdr for the attributes and reserve
+    should be:  ')'
+error in line# 77
+     lexed as:     -- car and cdr for the features.
+    should be:  ';'
+error in line# 78
+     lexed as:     
+    should be:  OBJECTID self
+error in line# 79
+     lexed as:     isNil() : Bool { false };
+    should be:  ';'
+error in line# 80
+     lexed as:     
+    should be:  '}'
+error in line# 81
+     lexed as:     init(hd : Book, tl : BookList) : Cons {
+    should be:  '}'
+error in line# 82
+     lexed as:         {
+    should be:  ';'
+error in line# 83
+     lexed as:             xcar <- hd;
+    should be:  '}'
+error in line# 84
+     lexed as:             xcdr <- tl;
+    should be:  ';'
+error in line# 85
+     lexed as:             self;
+    should be:  CLASS
+error in line# 86
+     lexed as:         }
+    should be:  TYPEID Article
+error in line# 87
+     lexed as:     };
+    should be:  INHERITS
+error in line# 88
+     lexed as: 
+    should be:  TYPEID Book
+error in line# 89
+     lexed as:     car() : Book { xcar };
+    should be:  '{'
+error in line# 90
+     lexed as: 
+    should be:  OBJECTID per_title
+error in line# 91
+     lexed as:     cdr() : BookList { xcdr };
+    should be:  ':'
+error in line# 92
+     lexed as:     
+    should be:  TYPEID String
+error in line# 93
+     lexed as:     print_list() : Object {
+    should be:  ';'
+error in line# 94
+     lexed as:         {
+    should be:  OBJECTID initArticle
+error in line# 95
+     lexed as:             case xcar.print() of
+    should be:  '('
+error in line# 96
+     lexed as:                 dummy : Book #96 DARROW
+    should be:  OBJECTID title_p
+error in line# 97
+     lexed as:  out_string("- dynamic type was Book -\n");
+    should be:  ':'
+error in line# 98
+     lexed as:                 dummy : Article #97 DARROW
+    should be:  TYPEID String
+error in line# 99
+     lexed as:  out_string("- dynamic type was Article -\n");
+    should be:  ','
+error in line# 100
+     lexed as:             esac;
+    should be:  OBJECTID author_p
+error in line# 101
+     lexed as:             xcdr.print_list();
+    should be:  ':'
+error in line# 102
+     lexed as:         }
+    should be:  TYPEID String
+error in line# 103
+     lexed as:     };
+    should be:  ','
+error in line# 104
+     lexed as: };
+    should be:  OBJECTID per_title_p
+error in line# 105
+     lexed as: 
+    should be:  ':'
+error in line# 106
+     lexed as:  Nil inherits BookList {
+    should be:  TYPEID String
+error in line# 107
+     lexed as:     isNil() : Bool { true };
+    should be:  ')'
+error in line# 108
+     lexed as: 
+    should be:  ':'
+error in line# 109
+     lexed as:     print_list() : Object { true };
+    should be:  TYPEID Article
+error in line# 110
+     lexed as: };
+    should be:  '{'
+error in line# 111
+     lexed as: 
+    should be:  '{'
+error in line# 112
+     lexed as: 
+    should be:  OBJECTID initBook
+error in line# 113
+     lexed as:  Main {
+    should be:  '('
+error in line# 114
+     lexed as: 
+    should be:  OBJECTID title_p
+error in line# 115
+     lexed as:     books : BookList;
+    should be:  ','
+error in line# 116
+     lexed as: 
+    should be:  OBJECTID author_p
+error in line# 117
+     lexed as:     main() : Object {
+    should be:  ')'
+error in line# 118
+     lexed as:         (let a_book : Book <-
+    should be:  ';'
+error in line# 119
+     lexed as:             (new Book).initBook("Compilers, Principles, Techniques, and Tools",
+    should be:  OBJECTID per_title
+error in line# 120
+     lexed as:                                 "Aho, Sethi, and Ullman")
+    should be:  ASSIGN
+error in line# 121
+     lexed as:         in
+    should be:  OBJECTID per_title_p
+error in line# 122
+     lexed as:             (let an_article : Article <-
+    should be:  ';'
+error in line# 123
+     lexed as:                 (new Article).initArticle("The Top 100 CD_ROMs",
+    should be:  OBJECTID self
+error in line# 124
+     lexed as:                                           "Ulanoff",
+    should be:  ';'
+error in line# 125
+     lexed as:                                           "PC Magazine")
+    should be:  '}'
+error in line# 126
+     lexed as:             in
+    should be:  '}'
+error in line# 127
+     lexed as:                 {
+    should be:  ';'
+error in line# 128
+     lexed as:                     books <- (new Nil).cons(a_book).cons(an_article);
+    should be:  OBJECTID print
+error in line# 129
+     lexed as:                     books.print_list();
+    should be:  '('
+error in line# 130
+     lexed as:                 }
+    should be:  ')'
+error in line# 131
+     lexed as:             )  -- end let an_article
+    should be:  ':'
+error in line# 132
+     lexed as:         )  -- end let a_book
+    should be:  TYPEID Book
+error in line# 133
+     lexed as:     };
+    should be:  '{'
+error in line# 134
+     lexed as: };
+    should be:  '{'

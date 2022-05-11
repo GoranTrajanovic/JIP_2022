@@ -1,0 +1,6 @@
+error in line# 1
+     lexed as:  XXX *) 
+    should be: 
+error in line# 3
+     lexed as:  XXX *)
+    should be: 

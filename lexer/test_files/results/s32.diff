@@ -1,0 +1,6 @@
+error in line# 1
+     lexed as:  tricky: this should be seen as an error, not two tokens
+    should be:  ERROR "Unmatched *)"
+error in line# 2
+     lexed as: *)
+    should be: 

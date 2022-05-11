@@ -1,0 +1,2 @@
+#name ".//test_files//s03.cl"
+-- can they handle EOF in "--" state?

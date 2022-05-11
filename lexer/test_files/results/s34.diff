@@ -1,0 +1,12 @@
+error in line# 1
+     lexed as: before_it
+    should be:  OBJECTID before_it
+error in line# 2
+     lexed as: 
+    should be:  ERROR "Unterminated string constant"
+error in line# 3
+     lexed as:  string \
+    should be: 
+error in line# 4
+     lexed as:  end
+    should be: 

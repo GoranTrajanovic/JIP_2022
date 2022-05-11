@@ -1,0 +1,33 @@
+error in line# 1
+     lexed as: 
+    should be:  '+'
+error in line# 2
+     lexed as: 
+    should be:  OBJECTID abc
+error in line# 3
+     lexed as: 
+    should be:  TYPEID DEF
+error in line# 4
+     lexed as:  fourth line
+    should be:  STR_CONST "string"
+error in line# 5
+     lexed as: *)
+    should be: 
+error in line# 6
+     lexed as:  sixth line
+    should be: 
+error in line# 7
+     lexed as: +
+    should be: 
+error in line# 8
+     lexed as: abc
+    should be: 
+error in line# 9
+     lexed as:  ninth line
+    should be: 
+error in line# 12
+     lexed as: DEF
+    should be: 
+error in line# 13
+     lexed as: "string"
+    should be: 

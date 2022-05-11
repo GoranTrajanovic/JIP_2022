@@ -1,0 +1,8 @@
+#name ".//test_files//escaped_chars_in_comment.cl"
+
+ *\) 
+  abc 
+  \
+jkl
+*)
+mno

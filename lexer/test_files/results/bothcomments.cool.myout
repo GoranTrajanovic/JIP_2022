@@ -1,0 +1,5 @@
+#name ".//test_files//bothcomments.cl"
+-- 
+ 
+.
+ if 5 then

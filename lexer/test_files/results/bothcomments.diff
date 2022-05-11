@@ -1,0 +1,12 @@
+error in line# 1
+     lexed as:  
+    should be:  OBJECTID what
+error in line# 2
+     lexed as:  
+    should be:  OBJECTID the
+error in line# 3
+     lexed as: .
+    should be:  OBJECTID programmer
+error in line# 4
+     lexed as:  if 5 then
+    should be:  OBJECTID thought

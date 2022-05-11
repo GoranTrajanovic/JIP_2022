@@ -1,0 +1,5 @@
+#name ".//test_files//stringcomment.cl"
+"This is a string--and it's still a string"
+--This is a comment, "not a string"
+
+""

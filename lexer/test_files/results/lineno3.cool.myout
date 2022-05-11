@@ -1,0 +1,14 @@
+#name ".//test_files//lineno3.cl"
+
+
+
+ fourth line
+*)
+-- sixth line
++
+abc
+-- ninth line
+
+
+DEF
+"string"

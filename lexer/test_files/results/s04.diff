@@ -1,0 +1,36 @@
+error in line# 1
+     lexed as: 
+    should be:  INT_CONST 0
+error in line# 2
+     lexed as: 0
+    should be:  INT_CONST 1
+error in line# 3
+     lexed as:         
+    should be:  INT_CONST 2
+error in line# 4
+     lexed as: 1
+    should be:  INT_CONST 3
+error in line# 5
+     lexed as:       
+    should be:  INT_CONST 4
+error in line# 6
+     lexed as: 2
+    should be:  INT_CONST 5
+error in line# 7
+     lexed as:       
+    should be: 
+error in line# 8
+     lexed as: 3
+    should be: 
+error in line# 9
+     lexed as: 	
+    should be: 
+error in line# 10
+     lexed as: 4
+    should be: 
+error in line# 11
+     lexed as:       
+    should be: 
+error in line# 12
+     lexed as: 5
+    should be: 

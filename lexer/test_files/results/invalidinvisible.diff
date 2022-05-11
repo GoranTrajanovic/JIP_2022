@@ -1,0 +1,6 @@
+error in line# 1
+     lexed as: gh
+    should be:  OBJECTID g
+error in line# 2
+     lexed as: 
+    should be:  ERROR "\001"

@@ -1,0 +1,9 @@
+error in line# 1
+     lexed as: 
+    should be:  STR_CONST "(*"
+error in line# 2
+     lexed as: 
+    should be:  ERROR "Unmatched *)"
+error in line# 3
+     lexed as: "*)""*)
+    should be:  STR_CONST "*)(*"
