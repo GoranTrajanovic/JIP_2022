@@ -1,21 +1,18 @@
 error in line# 1
-     lexed as: 
+     lexed as:  '*'
     should be:  OBJECTID mno
 error in line# 2
-     lexed as:  *\) 
+     lexed as:  ')'
     should be: 
 error in line# 3
-     lexed as:   abc 
+     lexed as:  OBJECTID abc
     should be: 
 error in line# 4
-     lexed as:   \
+     lexed as:  OBJECTID jkl
     should be: 
 error in line# 5
-     lexed as: jkl
+     lexed as:  ERROR "Unmatched *)"
     should be: 
 error in line# 6
-     lexed as: *)
-    should be: 
-error in line# 7
-     lexed as: mno
+     lexed as:  OBJECTID mno
     should be: 

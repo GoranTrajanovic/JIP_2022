@@ -1,6 +1,3 @@
 error in line# 1
-     lexed as: 
-    should be:  ERROR "_"
-error in line# 2
      lexed as: _
-    should be: 
+    should be:  ERROR "_"

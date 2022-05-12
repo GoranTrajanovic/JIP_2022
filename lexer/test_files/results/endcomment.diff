@@ -1,3 +1,0 @@
-error in line# 1
-     lexed as:  comment was never begun *)
-    should be:  TYPEID This

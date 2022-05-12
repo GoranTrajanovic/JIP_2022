@@ -1,3 +1,0 @@
-error in line# 1
-     lexed as:  there is an EOF coming... wait for it... wait for it...
-    should be:  ERROR "EOF in string constant"

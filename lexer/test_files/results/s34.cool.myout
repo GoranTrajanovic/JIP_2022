@@ -1,5 +1,2 @@
 #name ".//test_files//s34.cl"
-before_it
-
-"this string \
-doens't end
+#1 OBJECTID before_it

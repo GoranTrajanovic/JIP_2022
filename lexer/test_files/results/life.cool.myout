@@ -1,496 +1,262 @@
 #name ".//test_files//life.cl"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 #45 CLASS
-Board inherits IO { 
- 
- rows : Int;
- columns : Int;
- board_size : Int;
-
- size_of_board(initial : String) : Int {
-   initial.length()
- };
-
- board_init(start : String) : SELF_TYPE {
-   (let size :Int  <- size_of_board(start) in
-    {
-	if size = 15 then
-	 {
-	  rows <- 3;
-	  columns <- 5;
-	  board_size <- size;
-	 }
-	#64 ELSE
- if size = 16 then
-	  {
-	  rows <- 4;
-	  columns <- 4;
-	  board_size <- size;
-	 }
-	#70 ELSE
- if size = 20 then
-	 {
-	  rows <- 4;
-	  columns <- 5;
-	  board_size <- size;
-	 }
-	#76 ELSE
- if size = 21 then
-	 {
-	  rows <- 3;
-	  columns <- 7;
-	  board_size <- size;
-	 }
-	#82 ELSE
- if size = 25 then
-	 {
-	  rows <- 5;
-	  columns <- 5;
-	  board_size <- size;
-	 }
-	#88 ELSE
- if size = 28 then
-	 {
-	  rows <- 7;
-	  columns <- 4;
-	  board_size <- size;
-	 }
-	#94 ELSE
- 	-- If none of the above fit, then just give 
-	 {  -- the configuration of the most common board
-	  rows <- 5;
-	  columns <- 5;
-	  board_size <- size;
-	 }
-	fi fi fi fi fi fi;
-	self;
-    }
-   )
- };
-
-};
-
-
-
+#45 TYPEID Board
+#45 INHERITS
+#45 TYPEID IO
+#45 '{'
+#47 OBJECTID rows
+#47 ':'
+#47 TYPEID Int
+#47 ';'
+#48 OBJECTID columns
+#48 ':'
+#48 TYPEID Int
+#48 ';'
+#49 OBJECTID board_size
+#49 ':'
+#49 TYPEID Int
+#49 ';'
+#51 OBJECTID size_of_board
+#51 '('
+#51 OBJECTID initial
+#51 ':'
+#51 TYPEID String
+#51 ')'
+#51 ':'
+#51 TYPEID Int
+#51 '{'
+#52 OBJECTID initial
+#52 '.'
+#52 OBJECTID length
+#52 '('
+#52 ')'
+#53 '}'
+#53 ';'
+#55 OBJECTID board_init
+#55 '('
+#55 OBJECTID start
+#55 ':'
+#55 TYPEID String
+#55 ')'
+#55 ':'
+#55 TYPEID SELF_TYPE
+#55 '{'
+#56 '('
+#56 LET
+#56 OBJECTID size
+#56 ':'
+#56 TYPEID Int
+#56 ASSIGN
+#56 OBJECTID size_of_board
+#56 '('
+#56 OBJECTID start
+#56 ')'
+#56 IN
+#57 '{'
+#58 IF
+#58 OBJECTID size
+#58 '='
+#58 INT_CONST 15
+#58 THEN
+#59 '{'
+#60 OBJECTID rows
+#60 ASSIGN
+#60 INT_CONST 3
+#60 ';'
+#61 OBJECTID columns
+#61 ASSIGN
+#61 INT_CONST 5
+#61 ';'
+#62 OBJECTID board_size
+#62 ASSIGN
+#62 OBJECTID size
+#62 ';'
+#63 '}'
+#64 ELSE
+#64 IF
+#64 OBJECTID size
+#64 '='
+#64 INT_CONST 16
+#64 THEN
+#65 '{'
+#66 OBJECTID rows
+#66 ASSIGN
+#66 INT_CONST 4
+#66 ';'
+#67 OBJECTID columns
+#67 ASSIGN
+#67 INT_CONST 4
+#67 ';'
+#68 OBJECTID board_size
+#68 ASSIGN
+#68 OBJECTID size
+#68 ';'
+#69 '}'
+#70 ELSE
+#70 IF
+#70 OBJECTID size
+#70 '='
+#70 INT_CONST 20
+#70 THEN
+#71 '{'
+#72 OBJECTID rows
+#72 ASSIGN
+#72 INT_CONST 4
+#72 ';'
+#73 OBJECTID columns
+#73 ASSIGN
+#73 INT_CONST 5
+#73 ';'
+#74 OBJECTID board_size
+#74 ASSIGN
+#74 OBJECTID size
+#74 ';'
+#75 '}'
+#76 ELSE
+#76 IF
+#76 OBJECTID size
+#76 '='
+#76 INT_CONST 21
+#76 THEN
+#77 '{'
+#78 OBJECTID rows
+#78 ASSIGN
+#78 INT_CONST 3
+#78 ';'
+#79 OBJECTID columns
+#79 ASSIGN
+#79 INT_CONST 7
+#79 ';'
+#80 OBJECTID board_size
+#80 ASSIGN
+#80 OBJECTID size
+#80 ';'
+#81 '}'
+#82 ELSE
+#82 IF
+#82 OBJECTID size
+#82 '='
+#82 INT_CONST 25
+#82 THEN
+#83 '{'
+#84 OBJECTID rows
+#84 ASSIGN
+#84 INT_CONST 5
+#84 ';'
+#85 OBJECTID columns
+#85 ASSIGN
+#85 INT_CONST 5
+#85 ';'
+#86 OBJECTID board_size
+#86 ASSIGN
+#86 OBJECTID size
+#86 ';'
+#87 '}'
+#88 ELSE
+#88 IF
+#88 OBJECTID size
+#88 '='
+#88 INT_CONST 28
+#88 THEN
+#89 '{'
+#90 OBJECTID rows
+#90 ASSIGN
+#90 INT_CONST 7
+#90 ';'
+#91 OBJECTID columns
+#91 ASSIGN
+#91 INT_CONST 4
+#91 ';'
+#92 OBJECTID board_size
+#92 ASSIGN
+#92 OBJECTID size
+#92 ';'
+#93 '}'
+#94 ELSE
+#95 '{'
+#96 OBJECTID rows
+#96 ASSIGN
+#96 INT_CONST 5
+#96 ';'
+#97 OBJECTID columns
+#97 ASSIGN
+#97 INT_CONST 5
+#97 ';'
+#98 OBJECTID board_size
+#98 ASSIGN
+#98 OBJECTID size
+#98 ';'
+#99 '}'
+#100 FI
+#100 FI
+#100 FI
+#100 FI
+#100 FI
+#100 FI
+#100 ';'
+#101 OBJECTID self
+#101 ';'
+#102 '}'
+#103 ')'
+#104 '}'
+#104 ';'
+#106 '}'
+#106 ';'
 #110 CLASS
-CellularAutomaton inherits Board {
-    population_map : String;
-   
-    init(map : String) : SELF_TYPE {
-        {
-            population_map <- map;
-	    board_init(map);
-            self;
-        }
-    };
-
-
-
-   
-    print() : SELF_TYPE {
-        
-	(let i : Int <- 0 in
-	(let num : Int <- board_size in
-	{
- 	out_string("\n");
-	 while i < num loop
-           {
-	    out_string(population_map.substr(i,columns));
-	    out_string("\n"); 
-	    i <- i + columns;
-	   }
-	 pool;
- 	out_string("\n");
-	self;
-	}
-	) ) 
-    };
-   
-    num_cells() : Int {
-        population_map.length()
-    };
-   
-    cell(position : Int) : String {
-	if board_size - 1 < position then
-		" "
-	#150 ELSE
- 
-        	population_map.substr(position, 1)
-	fi
-    };
-   
- north(position : Int): String {
-	if (position - columns) < 0 then
-	      " "	                       
-	#158 ELSE
-
-	   cell(position - columns)
-	fi
- };
-
- south(position : Int): String {
-	if board_size < (position + columns) then
-	      " "                     
-	#166 ELSE
-
-	   cell(position + columns)
-	fi
- };
-
- east(position : Int): String {
-	if (((position + 1) /columns ) * columns) = (position + 1) then
-	      " "                
-	#174 ELSE
-
-	   cell(position + 1)
-	fi 
- };
-
- west(position : Int): String {
-	if position = 0 then
-	      " "
-	#182 ELSE
- 
-	   if ((position / columns) * columns) = position then
-	      " "
-	   #185 ELSE
-
-	      cell(position - 1)
-	fi fi
- };
-
- northwest(position : Int): String {
-	if (position - columns) < 0 then
-	      " "	                       
-	#193 ELSE
-  if ((position / columns) * columns) = position then
-	      " "
-	      #195 ELSE
-
-		north(position - 1)
-	fi fi
- };
-
- northeast(position : Int): String {
-	if (position - columns) < 0 then
-	      " "	
-	#203 ELSE
- if (((position + 1) /columns ) * columns) = (position + 1) then
-	      " "     
-	     #205 ELSE
-
-	       north(position + 1)
-	fi fi
- };
-
- southeast(position : Int): String {
-	if board_size < (position + columns) then
-	      " "                     
-	#213 ELSE
- if (((position + 1) /columns ) * columns) = (position + 1) then
-	       " "                
-	     #215 ELSE
-
-	       south(position + 1)
-	fi fi
- };
-
- southwest(position : Int): String {
-	if board_size < (position + columns) then
-	      " "                     
-	#223 ELSE
-  if ((position / columns) * columns) = position then
-	      " "
-	      #225 ELSE
-
-	       south(position - 1)
-	fi fi
- };
-
- neighbors(position: Int): Int { 
- 	{
-	     if north(position) = "X" then 1 #232 ELSE
- 0 fi
-	     + if south(position) = "X" then 1 #233 ELSE
- 0 fi
- 	     + if east(position) = "X" then 1 #234 ELSE
- 0 fi
- 	     + if west(position) = "X" then 1 #235 ELSE
- 0 fi
-	     + if northeast(position) = "X" then 1 #236 ELSE
- 0 fi
-	     + if northwest(position) = "X" then 1 #237 ELSE
- 0 fi
- 	     + if southeast(position) = "X" then 1 #238 ELSE
- 0 fi
-	     + if southwest(position) = "X" then 1 #239 ELSE
- 0 fi;
-	 }
- };
-
- 
-
-
-    
-    cell_at_next_evolution(position : Int) : String {
-
-	if neighbors(position) = 3 then
-		"X"
-	#251 ELSE
-
-	   if neighbors(position) = 2 then
-		if cell(position) = "X" then
-			"X"
-		#255 ELSE
-
-			"-"
-	        fi
-	   #258 ELSE
-
-		"-"
-	fi fi
-    };
-  
-
-    evolve() : SELF_TYPE {
-        (let position : Int <- 0 in
-        (let num : Int <- num_cells() in
-        (let temp : String in
-            {
-                while position < num loop
-                    {
-                        temp <- temp.concat(cell_at_next_evolution(position));
-                        position <- position + 1;
-                    }
-                pool;
-                population_map <- temp;
-                self;
-            }
-        ) ) )
-    };
-
-
-
- 
- option(): String {
- {
-  (let num : Int in
-   {
-   out_string("\nPlease chose a number:\n");
-   out_string("\t1: A cross\n"); 
-   out_string("\t2: A slash from the upper left to lower right\n");
-   out_string("\t3: A slash from the upper right to lower left\n"); 
-   out_string("\t4: An X\n"); 
-   out_string("\t5: A greater than sign \n"); 
-   out_string("\t6: A less than sign\n"); 
-   out_string("\t7: Two greater than signs\n"); 
-   out_string("\t8: Two less than signs\n"); 
-   out_string("\t9: A 'V'\n"); 
-   out_string("\t10: An inverse 'V'\n"); 
-   out_string("\t11: Numbers 9 and 10 combined\n"); 
-   out_string("\t12: A full grid\n"); 
-   out_string("\t13: A 'T'\n");
-   out_string("\t14: A plus '+'\n");
-   out_string("\t15: A 'W'\n");
-   out_string("\t16: An 'M'\n");
-   out_string("\t17: An 'E'\n");
-   out_string("\t18: A '3'\n");
-   out_string("\t19: An 'O'\n");
-   out_string("\t20: An '8'\n");
-   out_string("\t21: An 'S'\n");
-   out_string("Your choice #310 DARROW
- ");
-   num <- in_int();
-   out_string("\n");
-   if num = 1 then
-    	" XX  XXXX XXXX  XX  "
-   #315 ELSE
- if num = 2 then
-    	"    X   X   X   X   X    "
-   #317 ELSE
- if num = 3 then
-    	"X     X     X     X     X"
-   #319 ELSE
- if num = 4 then
-	"X   X X X   X   X X X   X"
-   #321 ELSE
- if num = 5 then
-	"X     X     X   X   X    "
-   #323 ELSE
- if num = 6 then
-	"    X   X   X     X     X"
-   #325 ELSE
- if num = 7 then
-	"X  X  X  XX  X      "
-   #327 ELSE
- if num = 8 then
-	" X  XX  X  X  X     "
-   #329 ELSE
- if num = 9 then
-	"X   X X X   X  "
-   #331 ELSE
- if num = 10 then
-	"  X   X X X   X"
-   #333 ELSE
- if num = 11 then
-	"X X X X X X X X"
-   #335 ELSE
- if num = 12 then
-	"XXXXXXXXXXXXXXXXXXXXXXXXX"
-   #337 ELSE
- if num = 13 then
-    	"XXXXX  X    X    X    X  "
-   #339 ELSE
- if num = 14 then
-    	"  X    X  XXXXX  X    X  "
-   #341 ELSE
- if num = 15 then
-    	"X     X X X X   X X  "
-   #343 ELSE
- if num = 16 then
-    	"  X X   X X X X     X"
-   #345 ELSE
- if num = 17 then
-	"XXXXX   X   XXXXX   X   XXXX"
-   #347 ELSE
- if num = 18 then
-	"XXX    X   X  X    X   XXXX "
-   #349 ELSE
- if num = 19 then
-	" XX X  XX  X XX "
-   #351 ELSE
- if num = 20 then
-	" XX X  XX  X XX X  XX  X XX "
-   #353 ELSE
- if num = 21 then
-	" XXXX   X    XX    X   XXXX "
-   #355 ELSE
-
-	"                         "
-  fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi;
-    }
-   );
- }
- };
-
-
-
-
- prompt() : Bool { 
- {
-  (let ans : String in
-   {
-   out_string("Would you like to continue with the next generation? \n");
-   out_string("Please use lowercase y or n for your answer [y]: ");
-   ans <- in_string();
-   out_string("\n");
-   if ans = "n" then 
-	false
-   #376 ELSE
-
-	true
-   fi;
-   }
-  );
- }
- };
-
-
- prompt2() : Bool { 
-  (let ans : String in
-   {
-   out_string("\n\n");
-   out_string("Would you like to choose a background pattern? \n");
-   out_string("Please use lowercase y or n for your answer [n]: ");
-   ans <- in_string();
-   if ans = "y" then 
-	true
-   #394 ELSE
-
-	false
-   fi;
-   }
-  )
- };
-
-
-};
-
-#404 CLASS
-Main inherits CellularAutomaton {
-    cells : CellularAutomaton;
-   
-    main() : SELF_TYPE {
-        {
-	 (let continue : Bool  in
-	  (let choice : String  in
-	   {
-	   out_string("Welcome to the Game of Life.\n");
-	   out_string("There are many initial states to choose from. \n");
-	   while prompt2() loop
-	    {
-	     continue <- true;
-	     choice <- option();
-	     cells <- (new CellularAutomaton).init(choice);
-	     cells.print();
-             while continue loop
-		if prompt() then
-                    {
-                        cells.evolve();
-                        cells.print();
-                    }
-		#426 ELSE
-
-		    continue <- false
-	      fi 
-                pool;
-            }
-            pool;
-	    self;
-      }  ) ); }
-    };
-};
-
+#110 TYPEID CellularAutomaton
+#110 INHERITS
+#110 TYPEID Board
+#110 '{'
+#111 OBJECTID population_map
+#111 ':'
+#111 TYPEID String
+#111 ';'
+#113 OBJECTID init
+#113 '('
+#113 OBJECTID map
+#113 ':'
+#113 TYPEID String
+#113 ')'
+#113 ':'
+#113 TYPEID SELF_TYPE
+#113 '{'
+#114 '{'
+#115 OBJECTID population_map
+#115 ASSIGN
+#115 OBJECTID map
+#115 ';'
+#116 OBJECTID board_init
+#116 '('
+#116 OBJECTID map
+#116 ')'
+#116 ';'
+#117 OBJECTID self
+#117 ';'
+#118 '}'
+#119 '}'
+#119 ';'
+#124 OBJECTID print
+#124 '('
+#124 ')'
+#124 ':'
+#124 TYPEID SELF_TYPE
+#124 '{'
+#126 '('
+#126 LET
+#126 OBJECTID i
+#126 ':'
+#126 TYPEID Int
+#126 ASSIGN
+#126 INT_CONST 0
+#126 IN
+#127 '('
+#127 LET
+#127 OBJECTID num
+#127 ':'
+#127 TYPEID Int
+#127 ASSIGN
+#127 OBJECTID board_size
+#127 IN
+#128 '{'
+#129 OBJECTID out_string
+#129 '('

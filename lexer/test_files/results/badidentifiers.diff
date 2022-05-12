@@ -1,21 +1,12 @@
-error in line# 1
-     lexed as: inky.binky.winky.dot
-    should be:  OBJECTID inky
-error in line# 2
-     lexed as: 1thatwasanumber
-    should be:  '.'
-error in line# 3
-     lexed as: two-objects
-    should be:  OBJECTID binky
-error in line# 4
-     lexed as: Two-Types
-    should be:  '.'
-error in line# 5
-     lexed as: _underscore
-    should be:  OBJECTID winky
-error in line# 6
-     lexed as: Type-object
-    should be:  '.'
-error in line# 7
-     lexed as: 
-    should be:  OBJECTID dot
+error in line# 16
+     lexed as:  OBJECTID underscore
+    should be:  ERROR "_"
+error in line# 17
+     lexed as:  TYPEID Type
+    should be:  OBJECTID underscore
+error in line# 18
+     lexed as:  '-'
+    should be:  TYPEID Type
+error in line# 19
+     lexed as:  OBJECTID object
+    should be:  '-'

@@ -1,3 +1,0 @@
-error in line# 1
-     lexed as:  with no closing quote\"
-    should be:  ERROR "EOF in string constant"

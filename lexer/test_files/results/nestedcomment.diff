@@ -1,6 +1,12 @@
 error in line# 1
-     lexed as:  XXX *) 
+     lexed as:  TYPEID XXX
+    should be: 
+error in line# 2
+     lexed as:  ERROR "Unmatched *)"
     should be: 
 error in line# 3
-     lexed as:  XXX *)
+     lexed as:  TYPEID XXX
+    should be: 
+error in line# 4
+     lexed as:  ERROR "Unmatched *)"
     should be: 

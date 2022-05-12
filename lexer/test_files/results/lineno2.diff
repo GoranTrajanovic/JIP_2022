@@ -1,21 +1,18 @@
 error in line# 1
-     lexed as: 
+     lexed as:  OBJECTID fdjsk
     should be:  ERROR "!"
 error in line# 2
-     lexed as: 
+     lexed as:  ';'
     should be:  OBJECTID fjdk
 error in line# 3
-     lexed as:  fdjsk;ajs
+     lexed as:  OBJECTID ajs
     should be:  STR_CONST ""
 error in line# 4
-     lexed as: *)
+     lexed as:  ERROR "Unmatched *)"
     should be: 
 error in line# 5
-     lexed as: !
+     lexed as:  OBJECTID fjdk
     should be: 
 error in line# 6
-     lexed as: fjdk
-    should be: 
-error in line# 7
-     lexed as: ""
+     lexed as:  STR_CONST ""
     should be: 

@@ -1,3 +1,21 @@
 error in line# 1
-     lexed as:  can they handle EOF in "--" state?
+     lexed as:  '-'
+    should be: 
+error in line# 2
+     lexed as:  '-'
+    should be: 
+error in line# 3
+     lexed as:  OBJECTID can
+    should be: 
+error in line# 4
+     lexed as:  OBJECTID they
+    should be: 
+error in line# 5
+     lexed as:  OBJECTID handle
+    should be: 
+error in line# 6
+     lexed as:  TYPEID EOF
+    should be: 
+error in line# 7
+     lexed as:  IN
     should be: 

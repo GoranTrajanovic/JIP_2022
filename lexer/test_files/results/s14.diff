@@ -1,6 +1,0 @@
-error in line# 1
-     lexed as:   token2  -- cmt2
-    should be:  OBJECTID token
-error in line# 2
-     lexed as: 
-    should be:  OBJECTID token2

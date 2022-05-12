@@ -1,15 +1,0 @@
-error in line# 1
-     lexed as:  is a tab:\	"
-    should be:  STR_CONST "This is a tab:\t"
-error in line# 2
-     lexed as:  is a backspace:\"
-    should be:  STR_CONST "This is a backspace:\b"
-error in line# 3
-     lexed as:  is a formfeed:\"
-    should be:  STR_CONST "This is a formfeed:\f"
-error in line# 4
-     lexed as:  is a carriage return:"
-    should be:  STR_CONST "This is a carriage return:\015"
-error in line# 5
-     lexed as:  is an escape:"
-    should be:  STR_CONST "This is an escape:\033"

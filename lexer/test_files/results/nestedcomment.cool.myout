@@ -1,4 +1,5 @@
 #name ".//test_files//nestedcomment.cl"
- XXX *) 
-
- XXX *)
+#1 TYPEID XXX
+#1 ERROR "Unmatched *)"
+#3 TYPEID XXX
+#3 ERROR "Unmatched *)"

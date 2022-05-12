@@ -1,3 +1,2 @@
 #name ".//test_files//s32.cl"
--- tricky: this should be seen as an error, not two tokens
-*)
+#2 ERROR "Unmatched *)"

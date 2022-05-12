@@ -1,2 +1,7 @@
 #name ".//test_files//endcomment.cl"
-This comment was never begun *)
+#1 TYPEID This
+#1 OBJECTID comment
+#1 OBJECTID was
+#1 OBJECTID never
+#1 OBJECTID begun
+#1 ERROR "Unmatched *)"

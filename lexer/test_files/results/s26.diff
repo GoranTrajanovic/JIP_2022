@@ -1,9 +1,0 @@
-error in line# 1
-     lexed as: 
-    should be:  INT_CONST 3
-error in line# 2
-     lexed as: 
-    should be:  OBJECTID a
-error in line# 3
-     lexed as: 3a
-    should be: 
