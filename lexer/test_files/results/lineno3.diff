@@ -16,3 +16,6 @@ error in line# 5
 error in line# 6
      lexed as:  TYPEID DEF
     should be: 
+error in line# 7
+     lexed as:  STR_CONST "string"
+    should be: 

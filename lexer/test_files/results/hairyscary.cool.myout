@@ -320,3 +320,8 @@
 #60 ':'
 #60 TYPEID String
 #60 '{'
+#60 STR_CONST "do nothing"
+#60 '}'
+#60 ';'
+#62 '}'
+#62 ';'

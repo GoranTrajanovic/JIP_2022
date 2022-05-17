@@ -1,0 +1,39 @@
+error in line# 6
+     lexed as:  '-'
+    should be:  ERROR "\\"
+error in line# 7
+     lexed as:  STR_CONST ""
+    should be:  '-'
+error in line# 8
+     lexed as:  STR_CONST "--\\"
+    should be:  ERROR "\\"
+error in line# 9
+     lexed as:  STR_CONST "\\"
+    should be:  STR_CONST ""
+error in line# 10
+     lexed as:  STR_CONST "\\"
+    should be:  ERROR "\\"
+error in line# 11
+     lexed as:  STR_CONST "\"--\""
+    should be:  STR_CONST "--\\"
+error in line# 12
+     lexed as:  STR_CONST ""
+    should be:  ERROR "\\"
+error in line# 13
+     lexed as:  STR_CONST "--\\"
+    should be:  STR_CONST "\\"
+error in line# 15
+     lexed as:  STR_CONST "--"
+    should be:  STR_CONST "\"--\""
+error in line# 16
+     lexed as:  STR_CONST "\""
+    should be:  ERROR "\\"
+error in line# 17
+     lexed as:  ERROR "Unterminated string constant"
+    should be:  ERROR "\\"
+error in line# 18
+     lexed as:  STR_CONST "-\""
+    should be:  STR_CONST ""
+error in line# 19
+     lexed as: \
+    should be:  ERROR "\\"

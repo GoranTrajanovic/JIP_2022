@@ -1,1 +1,3 @@
 #name ".//test_files//wq0607-c2.cl"
+#3 STR_CONST "*)"
+#3 STR_CONST "*)(*"

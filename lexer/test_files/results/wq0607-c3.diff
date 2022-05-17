@@ -1,0 +1,18 @@
+error in line# 3
+     lexed as:  STR_CONST ""
+    should be:  ERROR "\\"
+error in line# 4
+     lexed as:  STR_CONST "\\"
+    should be:  ERROR "\\"
+error in line# 5
+     lexed as:  STR_CONST "\\"
+    should be:  STR_CONST ""
+error in line# 6
+     lexed as:  STR_CONST ""
+    should be:  ERROR "\\"
+error in line# 7
+     lexed as:  STR_CONST "\""
+    should be:  STR_CONST "\\"
+error in line# 8
+     lexed as:  ERROR "Unterminated string constant"
+    should be:  ERROR "\\"

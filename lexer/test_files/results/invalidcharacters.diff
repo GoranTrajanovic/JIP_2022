@@ -1,3 +1,6 @@
 error in line# 1
-     lexed as: !#$%^&_>?`[]\|
+     lexed as:  ERROR "_"
     should be:  ERROR "!"
+error in line# 2
+     lexed as: >?`[]\|
+    should be:  ERROR "#"

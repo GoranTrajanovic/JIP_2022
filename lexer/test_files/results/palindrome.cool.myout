@@ -102,3 +102,30 @@
 #17 ';'
 #18 OBJECTID out_string
 #18 '('
+#18 STR_CONST "enter a string\n"
+#18 ')'
+#18 ';'
+#19 IF
+#19 OBJECTID pal
+#19 '('
+#19 OBJECTID in_string
+#19 '('
+#19 ')'
+#19 ')'
+#20 THEN
+#20 OBJECTID out_string
+#20 '('
+#20 STR_CONST "that was a palindrome\n"
+#20 ')'
+#21 ELSE
+#21 OBJECTID out_string
+#21 '('
+#21 STR_CONST "that was not a palindrome\n"
+#21 ')'
+#22 FI
+#22 ';'
+#23 '}'
+#24 '}'
+#24 ';'
+#25 '}'
+#25 ';'

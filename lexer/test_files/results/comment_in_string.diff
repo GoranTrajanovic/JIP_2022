@@ -1,0 +1,6 @@
+error in line# 2
+     lexed as:  STR_CONST "string (* 123 *)"
+    should be:  STR_CONST "string \n(* 123 *)"
+error in line# 3
+     lexed as:  STR_CONST "string (* 123 *)"
+    should be:  STR_CONST "string (* \n123 *)"

@@ -1,1 +1,20 @@
 #name ".//test_files//wq0607-c4.cl"
+#3 STR_CONST "\\-"
+#3 '-'
+#3 STR_CONST "--"
+#4 STR_CONST "\\"
+#4 STR_CONST "\"--\""
+\#4 '-'
+\#4 STR_CONST ""
+\#4 STR_CONST "--\\"
+\#4 STR_CONST "\\"
+#5 STR_CONST "\\"
+#5 STR_CONST "\"--\""
+\\#5 STR_CONST ""
+\#5 STR_CONST "--\\"
+\#5 STR_CONST "\\"
+#5 STR_CONST "--"
+\#5 STR_CONST "\""
+\#6 ERROR "Unterminated string constant"
+#6 STR_CONST "-\""
+\

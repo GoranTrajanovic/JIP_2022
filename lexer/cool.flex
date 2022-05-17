@@ -53,6 +53,7 @@ extern YYSTYPE cool_yylval;
 DARROW          =>
 LE              <=
 %x COMMENT
+%x DASHCOMMENT
 %x STRING
 
 CLASS           [cC][lL][aA][sS][sS]
@@ -101,15 +102,26 @@ INT_CONST       {DIGIT}+
   "*)"              { BEGIN (INITIAL); }
   \n                { curr_lineno++; }
   <<EOF>>           { 
-                      BEGIN (INITIAL); 
                       cool_yylval.error_msg = "EOF in comment"; 
+                      BEGIN (INITIAL); 
                       return (ERROR);
+                    }
+  .                 {}
+}
+
+<DASHCOMMENT>{
+  \n                { BEGIN (INITIAL); curr_lineno++; }
+  <<EOF>>           { 
+
+                      BEGIN (INITIAL); 
+                      
                     }
   .                 {}
 }
 
 <STRING>{
   \"                { 
+                      *string_buf_ptr++ = '\0';
                       BEGIN (INITIAL);
                       if ((string_buf_ptr - string_buf) > MAX_STR_CONST - 1) {
                           BEGIN (INITIAL);
@@ -120,7 +132,11 @@ INT_CONST       {DIGIT}+
                       cool_yylval.symbol = stringtable.add_string(string_buf);
                       return (STR_CONST);
                     }
-  <<EOF>>           { cool_yylval.error_msg = "EOF in string constant"; return (ERROR); }
+  <<EOF>>           { 
+                      cool_yylval.error_msg = "EOF in string constant";
+                      BEGIN (INITIAL);
+                      return (ERROR);
+                    }
   \\\n              { curr_lineno++; }
   \n                { 
                       curr_lineno++;
@@ -154,7 +170,10 @@ INT_CONST       {DIGIT}+
   
   "*)"              { cool_yylval.error_msg = "Unmatched *)"; return (ERROR); }
   "(*"              { BEGIN (COMMENT); }
-  "\""              { BEGIN (STRING); }
+  "\""              { BEGIN (STRING); string_buf_ptr = string_buf; }
+  "--"              { BEGIN (DASHCOMMENT); }
+
+  <<EOF>>           { yyterminate(); }
   
   
   {CLASS}           { return (CLASS); }
@@ -196,12 +215,13 @@ INT_CONST       {DIGIT}+
   ")"               { return ')'; }
   ":"               { return ':'; }
   ";"               { return ';'; }
+  "_"               { cool_yylval.error_msg = yytext; return (ERROR); }
 
   {OBJECTID}        { cool_yylval.symbol = idtable.add_string(yytext); return (OBJECTID); }
   {TYPEID}          { cool_yylval.symbol = idtable.add_string(yytext); return (TYPEID); }
   {INT_CONST}       { cool_yylval.symbol = inttable.add_string(yytext); return (INT_CONST); }
 
-  {DASHCOMMENT}     { curr_lineno++; }
+
   \n                { curr_lineno++; }
   {WHITESPACE}      {}
 }

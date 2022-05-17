@@ -1,1 +1,2 @@
 #name ".//test_files//eofstring.cl"
+#1 ERROR "EOF in string constant"
