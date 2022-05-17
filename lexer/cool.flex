@@ -37,6 +37,7 @@ char *string_buf_ptr;
 
 extern int curr_lineno;
 extern int verbose_flag;
+int comment_depth = 1;
 
 extern YYSTYPE cool_yylval;
 
@@ -99,7 +100,17 @@ INT_CONST       {DIGIT}+
   *  Nested comments
   */
 <COMMENT>{
-  "*)"              { BEGIN (INITIAL); }
+  "*)"              { 
+                      if(comment_depth == 1) BEGIN (INITIAL);
+                      else if (comment_depth < 1) {
+                        cool_yylval.error_msg = "Unmached *)"; 
+                        comment_depth = 1;
+                        BEGIN (INITIAL);
+                        return (ERROR);
+                      }
+                      else comment_depth--;
+                    }
+  "(*"              { comment_depth++; }
   \n                { curr_lineno++; }
   <<EOF>>           { 
                       cool_yylval.error_msg = "EOF in comment"; 
@@ -123,7 +134,7 @@ INT_CONST       {DIGIT}+
   \"                { 
                       *string_buf_ptr++ = '\0';
                       BEGIN (INITIAL);
-                      if ((string_buf_ptr - string_buf) > MAX_STR_CONST - 1) {
+                      if ((string_buf_ptr - string_buf) > MAX_STR_CONST) {
                           BEGIN (INITIAL);
                           cool_yylval.error_msg = "String constant too long";
                           return (ERROR);
@@ -137,7 +148,7 @@ INT_CONST       {DIGIT}+
                       BEGIN (INITIAL);
                       return (ERROR);
                     }
-  \\\n              { curr_lineno++; }
+  \\\n              { curr_lineno++; *string_buf_ptr++ = yytext[1]; }
   \n                { 
                       curr_lineno++;
                       BEGIN (INITIAL);
@@ -216,11 +227,16 @@ INT_CONST       {DIGIT}+
   ":"               { return ':'; }
   ";"               { return ';'; }
   "_"               { cool_yylval.error_msg = yytext; return (ERROR); }
+  "\\"              { cool_yylval.error_msg = yytext; return (ERROR); }
+  [\!\#\$\%\^\&\_\>\?\`\[\]\\\|] { cool_yylval.error_msg = yytext; return (ERROR); }
 
   {OBJECTID}        { cool_yylval.symbol = idtable.add_string(yytext); return (OBJECTID); }
   {TYPEID}          { cool_yylval.symbol = idtable.add_string(yytext); return (TYPEID); }
   {INT_CONST}       { cool_yylval.symbol = inttable.add_string(yytext); return (INT_CONST); }
-
+  "\001"            { cool_yylval.error_msg = "\001"; return (ERROR); }
+  "\002"            { cool_yylval.error_msg = "\002"; return (ERROR); }
+  "\003"            { cool_yylval.error_msg = "\003"; return (ERROR); }
+  "\004"            { cool_yylval.error_msg = "\004"; return (ERROR); }
 
   \n                { curr_lineno++; }
   {WHITESPACE}      {}

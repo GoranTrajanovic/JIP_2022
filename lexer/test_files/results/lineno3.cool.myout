@@ -1,7 +1,4 @@
 #name ".//test_files//lineno3.cl"
-#4 OBJECTID fourth
-#4 OBJECTID line
-#5 ERROR "Unmatched *)"
 #7 '+'
 #8 OBJECTID abc
 #12 TYPEID DEF
